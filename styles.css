@@ -1,0 +1,155 @@
+       body {
+        display: flex;
+        justify-content: center;
+        background-color: #d1ded1;
+        margin-top: 2%;
+      }
+      
+      .container {
+        width: 95%;
+        max-width: 1200px;
+        height: auto;
+        border: 6px solid #a2aba3;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+      }
+      
+      .first_section {
+        background-color: #19421b;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .profile_picture img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+      
+      .personal_information {
+        color: white;
+        text-align: center;
+      }
+      
+      .personal_information a {
+        color: white;
+        text-decoration: none;
+      }
+      
+      .personal_information a:hover {
+        color: lightgray;
+      }
+      
+      .linkedin, .github, .resume {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      
+      .linkedin img, .github img, .resume img {
+        width: 30px;
+        height: 30px;
+      }
+      
+      .make_your_cv {
+        margin-top: 10px;
+        cursor: pointer;
+        text-align: center;
+      }
+      
+      .make_your_cv:hover {
+        text-decoration: underline;
+      }
+      
+      .second_section {
+        background-color: lightgray;
+        padding: 2%;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      
+      .skills button {
+        cursor: pointer;
+        background-color: #19421b;
+        color: white;
+        border: 6px solid #a2aba3;
+        border-radius: 10px;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+      }
+      
+      .skills-list {
+        list-style-type: none;
+        padding-left: 10px;
+      }
+      
+      @media (max-width: 768px) {
+        .container {
+          grid-template-columns: 1fr;
+          padding: 0;
+        }
+      
+        .profile_picture img {
+          width: 120px;
+          height: 120px;
+        }
+      
+        .personal_information h1 {
+          font-size: 20px;
+        }
+      
+        .linkedin img, .github img, .resume img {
+          width: 25px;
+          height: 25px;
+        }
+      
+        .second_section {
+          padding: 10px;
+        }
+      
+        .skills button {
+          padding: 5px;
+          font-size: 14px;
+        }
+      
+        .skills-list {
+          font-size: 14px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .container {
+          padding: 0;
+        }
+      
+        .profile_picture img {
+          width: 100px;
+          height: 100px;
+        }
+      
+        .personal_information h1 {
+          font-size: 18px;
+        }
+      
+        .linkedin img, .github img, .resume img {
+          width: 20px;
+          height: 20px;
+        }
+      
+        .second_section {
+          padding: 5px;
+        }
+      
+        .skills button {
+          padding: 5px;
+          font-size: 12px;
+        }
+      
+        .skills-list {
+          font-size: 12px;
+        }
+      }
+      

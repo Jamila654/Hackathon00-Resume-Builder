@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Resume Builder</title>
+</head>
+<body>
+    <div class="container">
+        <div class="first_section">
+            <div class="profile_picture">
+                <img src="/assets/profile.png" alt="Profile Picture">
+            </div>
+            <div class="personal_information">
+                <h1>Jamila Yaqoob Dhedhi</h1>
+                <h3>📧 <a href="mailto:nurjamila1@gmail.com">nurjamila1@gmail.com</a></h3>
+                <div class="linkedin">
+                    <img src="/assets/linkedin.png" alt="LinkedIn Logo">
+                    <h3><a href="https://www.linkedin.com/in/jamila-yaqoob-dhedhi" target="_blank">LinkedIn</a></h3>
+                </div>
+                <div class="github">
+                    <img src="/assets/github.png" alt="GitHub Logo">
+                    <h3><a href="https://github.com/Jamila654?tab=repositories" target="_blank">GitHub</a></h3>
+                </div>
+                <div class="resume">
+                    <img src="/assets/resume.png" alt="Resume Icon">
+                    <h3><a href="/assets/Resume copy.pdf" download>Download CV</a></h3>
+                </div>
+                <div class="make_your_cv">
+                    <h3>Make Your Own CV</h3>
+                </div>
+            </div>
+        </div>
+        <div class="second_section">
+            <div class="work_experience">
+                <h1>Work Experience</h1>
+                <p>As a dedicated student with a passion for technology, I have gained valuable experience in both data entry and frontend development. In data entry, I have developed strong attention to detail, accuracy, and efficiency, managing large volumes of data while maintaining high standards of quality. Additionally, my experience in frontend development has equipped me with the skills to create responsive, user-friendly websites using technologies like HTML, CSS, and JavaScript. I have worked on projects that involve building dynamic web applications, enhancing user interfaces, and ensuring seamless user experiences across different devices.</p>
+            </div>
+            <div class="education">
+                <h1>Education</h1>
+                <ul>
+                    <li>Bachelor's in Cybersecurity</li>
+                    <li>GIAIC Student</li>
+                    <li>A Levels</li>
+                    <li>O Levels</li>
+                </ul>
+            </div>
+            <div class="skills">
+                <button id="skillsToggle" class="skills-btn"><h1>Skills <span id="toggleArrow">▼</span></h1></button>
+                <ul id="skillsList" class="skills-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>React</li>
+                    <li>NextJS</li>
+                    <li>Marketing and Sales</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("skillsToggle").addEventListener("click", function() {
+            const skillsList = document.getElementById("skillsList");
+            const toggleArrow = document.getElementById("toggleArrow");
+            if (skillsList.style.display === "none" || skillsList.style.display === "") {
+                skillsList.style.display = "block";
+                toggleArrow.textContent = "▲";
+            } else {
+                skillsList.style.display = "none";
+                toggleArrow.textContent = "▼";
+            }
+        });
+    </script>
+</body>
+</html>
+
