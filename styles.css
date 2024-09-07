@@ -152,4 +152,36 @@
           font-size: 12px;
         }
       }
-      
+      #cvForm span{
+        color: red;
+        
+      }
+      .form-container {
+        margin: 0 auto;
+        width: 80%;
+        max-width: 600px;
+        padding: 20px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    form label {
+        margin-top: 10px;
+    }
+    
+    form input, form textarea {
+        padding: 10px;
+        margin-top: 5px;
+    }
+    
+    button {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #19421b;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your CV</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>CV Builder</h1>
+        <form id="cvForm">
+            <label for="profile_picture">Profile Picture:</label>
+            <input type="file" id="profile_picture" accept="image/*">
+
+            <label for="name">Name<span>﹡</span>:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email<span>﹡</span>:</label>
+            <input type="email" id="email" required>
+
+            <label for="linkedin">LinkedIn:</label>
+            <input type="url" id="linkedin">
+
+            <label for="github">GitHub:</label>
+            <input type="url" id="github">
+
+            <label for="work_experience">Work Experience<span>﹡</span>:</label>
+            <textarea id="work_experience" required></textarea>
+
+            <label for="education">Education<span>﹡</span>:</label>
+            <textarea id="education" maxlength="19" required></textarea>
+
+            <label for="skills">Skills (Max 10)<span>﹡</span>:</label>
+            <textarea id="skills" maxlength="19" required></textarea>
+
+            <button type="submit">Generate CV</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('cvForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            
+            const profilePictureInput = document.getElementById('profile_picture');
+            const file = profilePictureInput.files[0];
+            const reader = new FileReader();
+
+            reader.onloadend = function() {
+                const profilePictureURL = reader.result;
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const linkedin = document.getElementById('linkedin').value;
+                const github = document.getElementById('github').value;
+                const workExperience = document.getElementById('work_experience').value;
+                const education = document.getElementById('education').value.split('\n').filter(Boolean);
+                const skills = document.getElementById('skills').value.split('\n').filter(Boolean);
+
+                localStorage.setItem('profile_picture', profilePictureURL);
+                localStorage.setItem('name', name);
+                localStorage.setItem('email', email);
+                localStorage.setItem('linkedin', linkedin);
+                localStorage.setItem('github', github);
+                localStorage.setItem('work_experience', workExperience);
+                localStorage.setItem('education', JSON.stringify(education));
+                localStorage.setItem('skills', JSON.stringify(skills));
+
+                window.location.href = '/cv_preview.html';
+            };
+
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                localStorage.removeItem('profile_picture');
+                window.location.href = '/cv_preview.html';
+            }
+        });
+    </script>
+</body>
+</html>
