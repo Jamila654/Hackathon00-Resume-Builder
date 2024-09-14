@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Preview</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -40,6 +41,11 @@
             </div>
         </div>
         <button id="save_changes">Save Changes</button>
+        <div id="options_modal" style="display:none;">
+            <button id="download_pdf">Download as PDF</button>
+            <button id="get_url">Get Shareable URL</button>
+          </div>
+        
     </div>
 
     <script src="/cv_preview.js" type="module">    
